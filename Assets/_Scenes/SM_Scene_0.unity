@@ -566,6 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617776565}
   - component: {fileID: 617776564}
+  - component: {fileID: 617776566}
   m_Layer: 0
   m_Name: ProjectileLine
   m_TagString: Untagged
@@ -582,7 +583,7 @@ LineRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
-  m_MotionVectors: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
@@ -610,7 +611,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -672,6 +673,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617776566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 617776563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab9addeeaed41e48ac8e8c988085918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDist: 0.1
 --- !u!4 &707670738 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4332544554221328, guid: 7e3a0a9c4e5cd7c4398c3e7b15b05261,
