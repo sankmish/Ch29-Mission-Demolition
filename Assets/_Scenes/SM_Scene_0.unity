@@ -563,6 +563,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDist: 0.1
+--- !u!1 &843740667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 843740668}
+  m_Layer: 0
+  m_Name: ViewBoth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843740668
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843740667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25, y: 25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966267256
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +605,7 @@ GameObject:
   - component: {fileID: 966267257}
   - component: {fileID: 966267262}
   - component: {fileID: 966267263}
+  - component: {fileID: 966267264}
   m_Layer: 0
   m_Name: _MainCamera
   m_TagString: MainCamera
@@ -687,6 +716,31 @@ MonoBehaviour:
   cloudScaleMin: 1
   cloudScaleMax: 3
   cloudSpeedMult: 0.5
+--- !u!114 &966267264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966267256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21b0572b2d14a1459e28f2c87b3a1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uitLevel: {fileID: 466826365}
+  uitShots: {fileID: 1862520594}
+  uitButton: {fileID: 1766739221}
+  castlePos: {x: 50, y: -9.5, z: 0}
+  castles:
+  - {fileID: 1424282975533014, guid: e57a6aba45166ec4ea9de33c4121ee7c, type: 2}
+  - {fileID: 1691445423354586, guid: 2351af2aa6b65cd4f91fd81978ccff91, type: 2}
+  - {fileID: 1676104621288190, guid: 7d6526f951fce8248adb42aa9ee28bea, type: 2}
+  level: 0
+  levelMax: 0
+  shotsTaken: 0
+  castle: {fileID: 0}
+  mode: 0
+  showing: Show Slingshot
 --- !u!1 &1053157145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1233,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847490107}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 966267264}
+        m_MethodName: SwitchView
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1847490107
